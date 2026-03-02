@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout repository
@@ -24,8 +24,10 @@ jobs:
           unzip \
           openjdk-17-jdk \
           autoconf \
+          automake \
           libtool \
           pkg-config \
+          m4 \
           zlib1g-dev \
           libncurses5-dev \
           libncursesw5-dev \
