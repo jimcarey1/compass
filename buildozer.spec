@@ -1,66 +1,20 @@
 [app]
-
-# (str) Title of your application
-title = MyApp
-
-# (str) Package name
-package.name = mykivyapp
-
-# (str) Package domain (reverse domain style)
-package.domain = com.venom
-
-# (str) Source code location
+title = CompassApp
+package.name = compassapp
+package.domain = com.yourname
 source.dir = .
-
-# (list) Source files to include
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
-
-# (str) Application version
 version = 0.1
 
-# (int) Android version code (increment for every Play Store update)
-android.version_code = 1
+# CRITICAL: Added pyjnius
+requirements = python3,kivy,pyjnius
 
-# (list) Requirements
-requirements = python3,kivy
-
-# (str) Supported orientation (portrait, landscape, all)
 orientation = portrait
-
-# (bool) Fullscreen mode
 fullscreen = 1
 
-# ----------------------------------------------------------------
-# ANDROID CONFIGURATION
-# ----------------------------------------------------------------
-
-# Target Android API
+# ANDROID SPECIFIC
 android.api = 33
-
-# Minimum supported API
 android.minapi = 21
-
-# NDK version (stable)
-android.ndk = 25b
-
-# Stable build tools (avoid preview versions)
-android.build_tools = 33.0.2
-
-# Permissions
-android.permissions = INTERNET
-
-# Use OpenGL ES 2
-android.opengl_es2 = True
-
-# Accept SDK licenses automatically (important for CI)
+# CRITICAL: Added sensor permissions
+android.permissions = INTERNET, VIBRATE, HIGH_SAMPLING_RATE_SENSORS
 android.accept_sdk_license = True
-
-# Use SDL2 bootstrap (default for Kivy)
-android.bootstrap = sdl2
-
-# ----------------------------------------------------------------
-# DEBUGGING
-# ----------------------------------------------------------------
-
-# Log level (2 = verbose, good for CI debugging)
-log_level = 2

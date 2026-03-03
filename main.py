@@ -55,7 +55,7 @@ class CompassImage(Image):
 class CompassApp(App):
     def build(self):
         self.img = CompassImage(
-            source="needle.png",  # Add your needle image
+            source="needle.jpeg",  # Add your needle image
             allow_stretch=True,
             keep_ratio=True,
         )
